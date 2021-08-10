@@ -664,8 +664,8 @@ kbd {
   font-size: 16px;
 }
 .content-wrap {
-  width: calc(100% - 330px);
-  float: left;
+  width: calc(100% - 250px);
+  float: right;
 }
 .content-wrap--noside {
   float: none;
@@ -725,10 +725,10 @@ kbd {
   width: 100%;
   font-size: 18px;
   background-color: #2d2e30;
-  height: 80vh;
+  height: 60vh;
 }
 .header-inner--bgcolor {
-  background-color: #333;
+  background-color: #89502f;
 }
 .header-inner--height {
   height: 50px !important;
@@ -756,7 +756,7 @@ kbd {
 }
 .header-nav--sticky {
   position: fixed;
-  background-color: #333;
+  background-color: #89502f;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -o-transform: translateY(-100%);
@@ -894,17 +894,6 @@ kbd {
   height: 100%;
   background: url("/images/fields.jpeg") no-repeat center/cover;
 }
-.header-banner::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
 .header-banner-info {
   position: absolute;
   top: 50%;
@@ -963,7 +952,7 @@ kbd {
   padding: 1rem 2rem;
   background-color: var(--color-card);
   padding: 1rem;
-  width: 300px;
+  width: 200px;
   font-size: 16px;
 }
 .sidebar--sticky {
@@ -980,8 +969,8 @@ kbd {
   display: none;
 }
 .sidebar-wrap {
-  width: 300px;
-  float: right;
+  width: 200px;
+  float: left;
 }
 .sidebar-nav {
   padding-bottom: 1em;
@@ -1056,46 +1045,158 @@ kbd {
   filter: none;
 }
 .sidebar-ov-author__avatar:hover .sidebar-ov-author__avatar_img {
-  -webkit-animation: avatar-turn 0.8s both ease-out;
-  -moz-animation: avatar-turn 0.8s both ease-out;
-  -o-animation: avatar-turn 0.8s both ease-out;
-  -ms-animation: avatar-turn 0.8s both ease-out;
-  animation: avatar-turn 0.8s both ease-out;
+  -webkit-animation: avatar-shake 0.8s both ease-out;
+  -moz-animation: avatar-shake 0.8s both ease-out;
+  -o-animation: avatar-shake 0.8s both ease-out;
+  -ms-animation: avatar-shake 0.8s both ease-out;
+  animation: avatar-shake 0.8s both ease-out;
 }
-@-moz-keyframes avatar-turn {
+@-moz-keyframes avatar-shake {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+    -moz-transform: scale(0.9) rotate(3deg);
+    -o-transform: scale(0.9) rotate(3deg);
+    -ms-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -moz-transform: scale(1.1) rotate(-3deg);
+    -o-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -moz-transform: scale(1.1) rotate(3deg);
+    -o-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
   100% {
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    transform: rotate(1turn);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
-@-webkit-keyframes avatar-turn {
+@-webkit-keyframes avatar-shake {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+    -moz-transform: scale(0.9) rotate(3deg);
+    -o-transform: scale(0.9) rotate(3deg);
+    -ms-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -moz-transform: scale(1.1) rotate(-3deg);
+    -o-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -moz-transform: scale(1.1) rotate(3deg);
+    -o-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
   100% {
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    transform: rotate(1turn);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
-@-o-keyframes avatar-turn {
+@-o-keyframes avatar-shake {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+    -moz-transform: scale(0.9) rotate(3deg);
+    -o-transform: scale(0.9) rotate(3deg);
+    -ms-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -moz-transform: scale(1.1) rotate(-3deg);
+    -o-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -moz-transform: scale(1.1) rotate(3deg);
+    -o-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
   100% {
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    transform: rotate(1turn);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
-@keyframes avatar-turn {
+@keyframes avatar-shake {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+    -moz-transform: scale(0.9) rotate(3deg);
+    -o-transform: scale(0.9) rotate(3deg);
+    -ms-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -moz-transform: scale(1.1) rotate(-3deg);
+    -o-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -moz-transform: scale(1.1) rotate(3deg);
+    -o-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
   100% {
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    transform: rotate(1turn);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 .sidebar-ov-author__text {
@@ -2110,7 +2211,7 @@ kbd {
   border-radius: 5px;
   padding: 1rem 2rem;
   background-color: var(--color-card);
-  float: left;
+  float: right;
 }
 .copy-button {
   position: absolute;
@@ -2379,12 +2480,12 @@ kbd {
   font-size: 0.9em;
   color: #999;
 }
-@media (min-width: 1138px) {
+@media (min-width: 1490px) {
   .header-nav-inner {
-    width: 1138px;
+    width: 1490px;
   }
   .main-inner {
-    width: 1138px;
+    width: 1490px;
   }
 }
 @media (min-width: 991.98px) {
@@ -2515,4 +2616,7 @@ kbd {
     padding: 0.5rem 1rem;
     width: 100%;
   }
+}
+.header-banner {
+  background-position-y: -650px;
 }
